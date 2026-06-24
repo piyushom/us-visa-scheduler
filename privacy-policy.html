@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — U.S. Visa Appointment Scheduler</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+        }
+        .last-updated {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 30px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        table th {
+            background-color: #ecf0f1;
+            font-weight: bold;
+        }
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        strong {
+            color: #2c3e50;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Privacy Policy — U.S. Visa Appointment Scheduler</h1>
+    <p class="last-updated"><strong>Last updated: June 2026</strong></p>
+    
+    <p>This Privacy Policy describes how the U.S. Visa Appointment Scheduler Chrome extension ("the Extension") collects, uses, and stores information.</p>
+    
+    <hr>
+    
+    <h2>What the Extension Does</h2>
+    <p>The Extension monitors the U.S. Visa Information Service website (ais.usvisa-info.com) for earlier appointment slots on your behalf, using your existing logged-in browser session. It does not collect your username or password.</p>
+    
+    <hr>
+    
+    <h2>Information Collected</h2>
+    
+    <h3>From your AIS session</h3>
+    <ul>
+        <li><strong>AIS User ID</strong> — a numeric ID visible in the URL of the appointment scheduling page. Used to identify your session and query appointment availability.</li>
+        <li><strong>Email address</strong> — extracted from the AIS page footer. Used to associate your extension settings with your account.</li>
+        <li><strong>Current appointment date</strong> — your existing appointment date shown on the AIS page. Used to pre-fill the extension's search range.</li>
+        <li><strong>Selected consulate/facility</strong> — the consulate you have selected on the AIS scheduling page.</li>
+    </ul>
+    
+    <h3>From your extension settings</h3>
+    <ul>
+        <li><strong>Search date range</strong> — the start and end dates you configure for the appointment search.</li>
+        <li><strong>Scan interval</strong> — how frequently the extension checks for new appointments.</li>
+        <li><strong>Auto booking preference</strong> — whether the extension should automatically book a found appointment or only fill the form.</li>
+        <li><strong>Payment plan</strong> — your subscription tier (free or paid).</li>
+    </ul>
+    
+    <hr>
+    
+    <h2>How Information Is Used</h2>
+    <p>Your AIS User ID, email, facility, search settings, and anonymized usage metrics (e.g., number of scans, session duration, whether a booking was successful) are sent to a backend server operated by the developer for the following purposes:</p>
+    
+    <ul>
+        <li><strong>Storing your preferences</strong> so they persist across browser sessions.</li>
+        <li><strong>Analytics</strong> to understand how the extension is used, diagnose issues, and improve the product.</li>
+        <li><strong>Billing</strong> to manage free and paid subscription plans.</li>
+    </ul>
+    
+    <p>This data is not sold to third parties and is not used for advertising.</p>
+    
+    <hr>
+    
+    <h2>Data Storage</h2>
+    <ul>
+        <li>A session token (JWT) is stored in <code>chrome.storage.session</code> and is automatically cleared when the browser closes.</li>
+        <li>Your search settings and plan information are stored locally and synced with the backend server.</li>
+    </ul>
+    
+    <hr>
+    
+    <h2>Data Retention</h2>
+    <p>Session analytics data is retained on the backend for up to 12 months for product improvement purposes. You may request deletion of your data by contacting support.</p>
+    
+    <hr>
+    
+    <h2>Permissions Used</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Permission</th>
+                <th>Why it is needed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>activeTab</code></td>
+                <td>To read appointment data, CSRF token, and selected facility from the active AIS tab</td>
+            </tr>
+            <tr>
+                <td><code>scripting</code></td>
+                <td>To inject the content script into the AIS page to extract appointment information</td>
+            </tr>
+            <tr>
+                <td><code>storage</code></td>
+                <td>To persist your settings and session token locally on your device</td>
+            </tr>
+            <tr>
+                <td>Host: <code>ais.usvisa-info.com</code></td>
+                <td>To monitor the AIS website for appointment availability on your behalf</td>
+            </tr>
+            <tr>
+                <td>Host: backend server</td>
+                <td>To store your settings and send anonymized session analytics</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <hr>
+    
+    <h2>Contact</h2>
+    <p>For questions about this policy or to request data deletion, contact: <strong><a href="mailto:usvisaappointmentca@gmail.com">usvisaappointmentca@gmail.com</a></strong></p>
+    
+</body>
+</html>
